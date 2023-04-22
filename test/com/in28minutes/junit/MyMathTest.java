@@ -7,17 +7,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MyMathTest {
 
     @Test
-    void test() {
+    void calculateSum_ThreeMemberArray() {
 //        fail("not yet implemented");
         // Absence of failure is success
         // Test Conditions or Assert
-        int[] numbers = {1,2,3};
-        MyMath math = new MyMath();
-        int result = math.calculateSum(numbers);
-        System.out.println(result);
+        assertEquals(6, new MyMath().calculateSum(new int[]{1,2,3}));
+    }
 
-        int expectedResult = 5;
-        assertEquals(expectedResult, result);
+    // {} => 0
+    @Test
+    void  calculateSum_ZeroLenghtArray(){
+        assertEquals(0, new MyMath().calculateSum(new int[]{}));
     }
 
 }
